@@ -1,0 +1,15 @@
+'use client';
+
+import { TextField } from '@radix-ui/themes';
+import React from 'react';
+
+const NewIssuePage = () => {
+  return (
+    <div>
+        <TextField.Root placeholder='Title' />
+    
+    </div>
+  )
+}
+
+export default NewIssuePage
