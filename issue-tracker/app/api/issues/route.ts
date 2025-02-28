@@ -7,7 +7,7 @@ const createIssueSchema = z.object ({
     description: z.string().min(1) 
 })
 
-export async function POST (request: NextRequest){
+export async function POST (request: NextRequest) {
     const body = await request.json();
     const validation = createIssueSchema.safeParse (body);
     if (!validation.success)
@@ -16,4 +16,5 @@ export async function POST (request: NextRequest){
         data: {title: body.title, description: body.description }
     });
     return NextResponse.json (newIssue, { status: 201});
-}
+} 
+
